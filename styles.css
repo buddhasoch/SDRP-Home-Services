@@ -147,6 +147,8 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.5);
     padding: 40px;
     border-radius: 10px;
+    width: 90%; /* Ensure it fits within mobile screens */
+    max-width: 600px; /* Limit width for larger screens */
 }
 
 #home h1 {
@@ -340,6 +342,7 @@ h2 {
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    object-fit: cover; /* Ensure images don't stretch */
 }
 
 /* Testimonials */
@@ -374,6 +377,7 @@ h2 {
     border-radius: 50%;
     margin: 0 auto 10px;
     display: block;
+    object-fit: cover; /* Ensure images don't stretch */
 }
 
 @keyframes slideIn {
@@ -395,6 +399,7 @@ form input, form textarea {
     border-radius: 5px;
     background: #fff;
     color: #333333;
+    font-size: 16px; /* Ensure readability on mobile */
 }
 
 form textarea {
@@ -493,53 +498,241 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Header */
     header {
         flex-direction: column;
-        padding: 10px 20px;
+        padding: 10px 15px; /* Reduced padding for mobile */
     }
+
+    .logo-text {
+        font-size: 20px; /* Smaller font size for mobile */
+        margin: 5px 0;
+    }
+
     .hamburger {
         display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
     }
+
     nav {
         display: none;
         flex-direction: column;
         width: 100%;
         align-items: center;
+        margin-top: 10px;
     }
+
     nav.active {
         display: flex;
     }
+
     nav a {
-        margin: 10px 0;
+        margin: 8px 0;
+        font-size: 14px; /* Smaller font size for mobile */
     }
+
     .contact-info, .whatsapp-icon, .book-now-btn {
-        margin: 10px 0;
+        margin: 8px 0;
+        font-size: 12px;
     }
-    .service-box {
-        width: 100%;
-    }
-    .pest-service-box {
-        width: 100%;
-    }
-    #home h1 {
-        font-size: 32px;
-    }
-    #home p {
+
+    .whatsapp-icon {
         font-size: 16px;
     }
+
+    /* Hero Section */
+    .hero-slider {
+        height: 70vh; /* Reduced height for mobile */
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    #home h1 {
+        font-size: 28px; /* Smaller heading for mobile */
+    }
+
+    #home p {
+        font-size: 16px; /* Smaller paragraph for mobile */
+    }
+
+    #home button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Sections */
+    section {
+        padding: 60px 15px; /* Reduced padding for mobile */
+    }
+
+    h2 {
+        font-size: 28px; /* Smaller heading for mobile */
+        margin-bottom: 20px;
+    }
+
+    /* Services */
+    .service-box {
+        width: 90%; /* Full width with some margin */
+        margin: 10px auto;
+        padding: 20px;
+    }
+
+    .service-icon {
+        font-size: 30px;
+    }
+
+    .service-box h3 {
+        font-size: 18px;
+    }
+
+    .service-box p {
+        font-size: 14px;
+    }
+
+    .pest-service-box {
+        width: 90%; /* Full width for pest services */
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .pest-service-box h4 {
+        font-size: 14px;
+    }
+
+    .pest-service-box p {
+        font-size: 12px;
+    }
+
+    /* About */
     .about-content {
         flex-direction: column;
     }
+
     .about-text, .about-image {
         text-align: center;
+        padding: 10px;
     }
-    .logo-text {
-        font-size: 22px;
+
+    .about-image img {
+        max-width: 300px; /* Smaller image for mobile */
     }
+
+    /* Testimonials */
+    .testimonial-box {
+        padding: 20px;
+    }
+
+    .testimonial-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .testimonial-box p {
+        font-size: 14px;
+    }
+
+    /* Contact Form */
+    form input, form textarea {
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    form textarea {
+        height: 100px;
+    }
+
+    form button {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        margin: 15px 0;
+        min-width: 100%;
+    }
+
+    .footer-logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
     .footer-logo-img {
         width: 60px;
     }
-    .footer-logo {
-        text-align: center;
+
+    .footer-section h3 {
+        font-size: 14px;
+    }
+
+    .footer-section a {
+        font-size: 12px;
+    }
+
+    .footer-section i {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 8px;
+    }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .hamburger {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    #home h1 {
+        font-size: 24px;
+    }
+
+    #home p {
+        font-size: 14px;
+    }
+
+    #home button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .service-box h3 {
+        font-size: 16px;
+    }
+
+    .service-box p {
+        font-size: 12px;
+    }
+
+    .footer-logo-img {
+        width: 50px;
     }
 }
